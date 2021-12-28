@@ -1,0 +1,177 @@
+body {
+	font: 13px "Helvetica Neue";
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	display: block;
+	background: #a5d3ff url(images/header.png) repeat-x;
+	padding: 5px 10px;
+	color: #1D3C5E;
+	font-weight: bold;
+	text-shadow: rgba(255,255,255,.6) 0 1px 1px;
+	border-bottom: 1px solid #326299;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+header ul {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	line-height: 20px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+}
+
+header ul ul {
+	display: none;
+}
+
+header li {
+	float: left;
+	margin: 0 0 0 5px;
+}
+
+header a {
+	color: #1D3C5E;
+	display: block;
+	text-decoration: none;
+	border-width:0 10px 0 9px;
+	border-color:transparent;
+	-webkit-border-image:url(images/) 0 10 0 9;
+}
+
+header a:hover {
+	-webkit-border-image:url(images/inactive.png) 0 10 0 9;
+}
+
+header a.active {
+	border-width:0 10px 0 9px;
+	border-color:transparent;
+	-webkit-border-image:url(images/shown.png) 0 10 0 9;
+	color: #FFF;
+	text-shadow: rgba(0,0,0,.4) 0 1px 1px;
+}
+
+header span {
+	font-size: 9px;
+}
+
+footer {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 44px;
+	border-top: 1px solid #4999EF;
+	padding: 5px;
+	background: #9ECFFF;
+}
+
+footer textarea {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 80px;
+	bottom: 5px;
+}
+
+footer input {
+	position:absolute;
+	width: 70px;
+	right: 5px;
+	top: 5px;
+}
+
+section#onlines {
+	position: fixed;
+	top: 31px;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #326299;
+	background: #3A77BA;
+	padding: 5px;
+	display: none;
+}
+
+section#onlines.active {
+	display: block;
+}
+
+#onlines ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#onlines li {
+	display: inline-block;
+}
+
+#onlines a {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	color: #036;
+	margin: 0 5px 0 0;
+	padding: 0 0 0 1px;
+	font-size: 11px;
+	line-height: 18px;
+	height: 20px;
+	border-width:0 10px 0 9px;
+	border-color:transparent;
+	-webkit-border-image:url(images/inactive.png) 0 10 0 9;
+	text-shadow: rgba(255,255,255,.6) 0 1px 1px;
+}
+
+#onlines a.active {
+	-webkit-border-image:url(images/active.png) 0 10 0 9;
+}
+
+#chats {
+	position: fixed;
+	bottom: 55px;
+	padding: 10px;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+#chats table {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	width: 100%;
+	border-top: 1px solid #D6E0EB;
+}
+
+#chats td {
+	padding: 5px 5px;
+	border-bottom: 1px solid #D6E0EB;
+	color: #1D3A5E;
+}
+
+#chats td.person {
+	width: 100px;
+	font-weight: bold;
+	white-space: nowrap;
+	line-height: 1.4;
+}
+
+#chats tr[data-person=orderedlist] + tr[data-person=orderedlist] td.person {
+	text-indent: -9999px;
+}
+
+tr.active td {
+	background: #FF9;
+}

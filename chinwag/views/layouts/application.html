@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{{ application_name }}</title>
+	<link rel="stylesheet" href="/assets/css/common.css" type="text/css" media="screen" />
+	<script src="/assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.log.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.templates.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.timer.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.labelize.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.hotkeys.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.growfield.packed.js" type="text/javascript"></script>
+	<script src="/assets/js/application.js" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+		<h1>Room Name</h1>
+		<ul>
+			<li><a href="#" id="toggle_users" class="active">Users</a></li>
+			<li><a href="/rooms">Rooms</a></li>
+			<li><a href="{{ logout_url }}">Logout</a></li>
+		</ul>
+	</header>
+  <section id="onlines" class="active">
+    {% block onlines %}{% endblock %}
+  </section>
+	<section id="chats">
+		{% block chats %}{% endblock %}
+	</section>
+	
+	<footer>
+		<form action="#" id="chat_form" method="post">
+			<textarea id="message" class="note"></textarea>
+			<input type="submit" value="Send" />
+		</form>
+	</footer>
+</body>
+</html>
